@@ -1,2 +1,2 @@
-# gptsimplesite
-A simple web site thats use chatgpt api
+# GptSimpleSite
+This project is my first project that use flask blueprints
