@@ -1,0 +1,41 @@
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/main.css') }}">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="sitename">
+        <h2>GPT 3.5</h2>
+        <h2>Gpt Simple Site</h2>
+
+        <a href="/auth/register">
+            <img src="{{url_for('static', filename='img/person-icon.png') }}">
+        </a>
+    </header>
+    
+    <form action="/query/?email={{session['email']}}" method="post" class="maindiv">
+
+        {% if notConnected %}
+            <h3>olá! venha se ligar a uma conta para usar o gptsimplesite</h3>
+
+            <a href="/auth/login">Fazer login</a>
+            <a href="/auth/register">Fazer registro</a>
+        {% elif not notConnected %}
+            <nav class="responses">
+                {% for case in historyGet %}
+                    <nav class="responseBlock">
+                        <h3>{{ case['query'] }}</h3>
+                        <h4>{{ case['response'] }}</h4>
+                    </nav>
+                {% endfor %}
+            </nav>
+            <input type="text" placeholder="faça sua pergunta" class="queryInput" name="query">
+        {% endif %}
+    </form>
+
+</body>
+</html>
