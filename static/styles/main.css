@@ -1,0 +1,53 @@
+* {margin: 0.3%; padding: 0.5%;}
+
+body {
+    /* background-color: rgb(1, 109, 82); */
+    background-color: rgb(21, 21, 22);
+    border: 2px solid white;
+    color: white;
+}
+
+.sitename {
+    
+    border-bottom: 2px solid white;
+    display: flex;
+    justify-content: space-between;
+}
+.sitename img {
+    height: 3rem;
+    width: 3rem;
+}
+
+
+.queryInput {
+    border-radius: 10%;
+    border: none;
+    width: 85%;
+    text-align: center;
+}
+
+#loginForm {
+    display: flex;
+    justify-content: center;
+}
+
+.maindiv {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    margin-top: 10px;
+}
+  
+.responses {
+    border: solid white 2px;
+    background-color: rgb(8, 8, 8);
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.responseBlock {
+    background-color: rgb(26, 26, 26);
+    border: solid white 2px;
+    margin-bottom: 10px;
+}

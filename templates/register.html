@@ -1,0 +1,30 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{url_for('static', filename='styles/main.css') }}">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <header class="sitename">
+        <h2>GPT 3.5</h2>
+        <h2>Gpt Simple Site</h2>
+            
+        <a href="/auth/login">
+            <img src="{{url_for('static', filename='img/person-icon.png') }}">
+        </a>
+    </header>
+
+    <form action="/register/mongodb/new" method="post" id="loginForm">
+        <input type="text" name="username" id="username" placeholder="Insira seu nome de usuario">
+        <input type="email" name="email" id="email" placeholder="Insira email">
+        <input type="password" name="password" placeholder="Insira senha">
+
+        <button type="submit">registrar</button>
+        <a href="/auth/login">Já possui uma conta? clique aqui</a>
+    </form>
+
+</body>
+</html>
